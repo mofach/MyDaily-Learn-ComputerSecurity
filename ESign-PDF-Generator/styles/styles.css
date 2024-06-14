@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background-color: #00c8eb;
+  text-align: center;
+  color: white;
+}
+
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+nav li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+nav {
+  background-color: #00a2c6;
+  padding: 5px;
+
+  position: sticky;
+  top: 0;
+}
+header {
+  display: inline;
+}
+.upload-section,
+.signature-section {
+  margin: 20px 0;
+}
+
+canvas {
+  border: 1px solid #000;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.pdf-container {
+  margin: 20px 0;
+  position: relative;
+}
+
+#pdfCanvas {
+  border: 1px solid #000;
+  width: 100%; /* Menyesuaikan lebar canvas dengan lebar container */
+  height: auto; /* Mengikuti perubahan lebar sesuai dengan aspek rasio PDF */
+  max-width: 100%; /* Mencegah canvas melebihi lebar container */
+}

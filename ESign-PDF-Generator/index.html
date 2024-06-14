@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Signature on PDF</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>E Sign Generator</h1>
+        <p>
+          E Sign Generator sederhana berbasis web yang dibangun oleh kelompok 10
+          Mata Kuliah Computer Security yang Beranggotakan:
+        </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/aqilmfach_">Aqil</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/azkaaaeee">Azka</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/kang_ginn">Gin Gin</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1 class="mt-5 text-center">Tambahkan Tanda Tangan Digital ke PDF</h1>
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Upload PDF</h5>
+              <input
+                type="file"
+                class="form-control"
+                id="uploadPDF"
+                accept="application/pdf"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Upload Template</h5>
+              <input
+                type="file"
+                class="form-control"
+                id="uploadTemplate"
+                accept="image/png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tanda Tangan</h5>
+              <div class="signature-section">
+                <canvas id="signaturePad" width="400" height="200"></canvas>
+                <button id="clearSignature" class="btn btn-danger mt-3">
+                  Hapus Tanda Tangan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Preview PDF</h5>
+              <div id="pdfContainer" class="pdf-container">
+                <canvas id="pdfCanvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+          <button id="addSignature" class="btn btn-primary">
+            Tambahkan Tanda Tangan ke PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
